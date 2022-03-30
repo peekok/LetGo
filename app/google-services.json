@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "920398307216",
+    "project_id": "letgo-db69e",
+    "storage_bucket": "letgo-db69e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920398307216:android:97845ce4d7d7f9e7dc1d15",
+        "android_client_info": {
+          "package_name": "com.abdulrahman.offerup"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920398307216-fd9vp5beoaqdu53r4j4ptpfb7trm8pin.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh9uESBSz9coutTrXzvIU0d6N5_SKSApc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "920398307216-fd9vp5beoaqdu53r4j4ptpfb7trm8pin.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
