@@ -51,12 +51,24 @@
 
             <TextView
                 android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="@string/price"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/price"
+                />
+
+            <Button
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:lineSpacingMultiplier="1.26315789474"
                 android:paddingEnd="@dimen/padding_normal"
                 android:paddingStart="@dimen/padding_normal"
                 android:paddingTop="@dimen/padding_normal"
-                android:text="Hello World"
+                android:hint="@string/buy"
+                android:onClick="buy"
                 android:textAppearance="@android:style/TextAppearance.Material.Subhead"
                 android:textColor="?android:textColorSecondary"/>
 

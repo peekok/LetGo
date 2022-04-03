@@ -42,7 +42,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Abdulrahman Al-Suhimi"
+                    android:text="@string/author_name"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
                     android:textSize="25sp"/>
             </LinearLayout>
@@ -58,7 +58,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
                 android:padding="3dp"
-                android:text="w0d@hotmail.com"
+                android:text="@string/author_email"
 
                 />
                 </LinearLayout>
@@ -73,7 +73,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="13sp"
                     android:padding="3dp"
-                    android:text="0544677108"
+                    android:text="@string/author_phone"
 
                     />
             </LinearLayout>
@@ -111,7 +111,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
-                android:text="Previous Posts"
+                android:text="@string/ownedPictures"
                 android:textStyle="bold"/>
         </LinearLayout>
 

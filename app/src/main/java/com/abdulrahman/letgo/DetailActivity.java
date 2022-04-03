@@ -14,6 +14,8 @@ import android.widget.TextView;
 import com.abdulrahman.letgo.ui.ThreeTwoImageView;
 import com.squareup.picasso.Picasso;
 
+import java.util.Random;
+
 import butterknife.Bind;
 import butterknife.BindInt;
 import butterknife.ButterKnife;
@@ -25,6 +27,7 @@ public class DetailActivity extends Activity {
     @Bind(R.id.toolbar) Toolbar toolbar;
     @Bind(R.id.photo) ThreeTwoImageView imageView;
     @Bind(R.id.author) TextView author;
+    @Bind(R.id.price) TextView price;
     @BindInt(R.integer.detail_desc_slide_duration) int slideDuration;
 
     @Override
@@ -34,7 +37,11 @@ public class DetailActivity extends Activity {
         imageView = findViewById(R.id.photo);
         author = findViewById(R.id.author);
         toolbar = findViewById(R.id.toolbar);
+        price = findViewById(R.id.price);
         ButterKnife.bind(this);
+        Random random = new Random();
+        int randomPrice = random.nextInt(900) + 100;
+        price.setText(randomPrice + "USD");
         System.out.println(getIntent().getStringExtra(EXTRA_AUTHOR));
         Picasso.with(this)
                 .load(getIntent().getData())
@@ -56,5 +63,8 @@ public class DetailActivity extends Activity {
             slide.setDuration(slideDuration);
             getWindow().setEnterTransition(slide);
         }
+    }
+    public void buy(View view) {
+        // we will see about it.
     }
 }

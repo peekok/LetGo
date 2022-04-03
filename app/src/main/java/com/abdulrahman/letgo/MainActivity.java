@@ -30,6 +30,7 @@ import com.abdulrahman.letgo.ui.ItemClickSupport;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.FirebaseApp;
 import com.squareup.picasso.Picasso;
 import com.abdulrahman.letgo.data.UnsplashService;
 import com.abdulrahman.letgo.ui.ForegroundImageView;
@@ -63,6 +64,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        FirebaseApp.initializeApp(this);
         setContentView(R.layout.activity_nav);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -212,6 +214,10 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (id == R.id.view_profile) {
             Intent intent = new Intent(this,UserProfile.class);
+            startActivity(intent);
+        }
+        if (id == R.id.register) {
+            Intent intent = new Intent(this,Register.class);
             startActivity(intent);
         }
 

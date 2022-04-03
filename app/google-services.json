@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "920398307216",
+    "firebase_url": "https://letgo-db69e-default-rtdb.firebaseio.com",
     "project_id": "letgo-db69e",
     "storage_bucket": "letgo-db69e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:920398307216:android:97845ce4d7d7f9e7dc1d15",
+        "mobilesdk_app_id": "1:920398307216:android:565dd77c7fd6afffdc1d15",
         "android_client_info": {
-          "package_name": "com.abdulrahman.offerup"
+          "package_name": "com.abdulrahman.letgo"
         }
       },
       "oauth_client": [

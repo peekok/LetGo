@@ -41,7 +41,7 @@
     </item>
 
     <item
-        android:id="@+id/logout"
+        android:id="@+id/register"
         android:icon="@drawable/ic_register"
         android:title="Register" />
 
