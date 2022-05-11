@@ -11,7 +11,9 @@
    
  ### Used Libraries
  - Picasso
- - Firebase Auth/Realtime-Database
+ - Firebase Auth
+ - Firebase Realtime Database
+ - Firebase Storage
  - Androidx
  - Android Material
  - Toast
