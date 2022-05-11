@@ -1,5 +1,6 @@
 package com.abdulrahman.letgo;
 
+import android.annotation.SuppressLint;
 import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Rect;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 
 
 import androidx.annotation.NonNull;
@@ -28,9 +30,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.abdulrahman.letgo.data.model.Photo;
 import com.abdulrahman.letgo.ui.ItemClickSupport;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.internal.NavigationMenuItemView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 import com.squareup.picasso.Picasso;
 import com.abdulrahman.letgo.data.UnsplashService;
@@ -178,6 +182,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
     }
 
+    @SuppressLint({"RestrictedApi", "UseCompatLoadingForDrawables"})
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -189,7 +194,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 //                (SearchView) menu.findItem(R.id.search).getActionView();
 //        searchView.setSearchableInfo(
 //                searchManager.getSearchableInfo(getComponentName()));
-
+        if(FirebaseAuth.getInstance().getCurrentUser() != null) {
+            NavigationMenuItemView register = findViewById(R.id.register);
+            register.setTitle("Log out");
+            register.setIcon(getDrawable(R.drawable.ic_logout));
+        }
         return true;
     }
 
@@ -217,9 +226,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             Intent intent = new Intent(this,UserProfile.class);
             startActivity(intent);
         }
+
         if (id == R.id.register) {
-            Intent intent = new Intent(this,Register.class);
-            startActivity(intent);
+            if (FirebaseAuth.getInstance().getCurrentUser() != null) {
+                FirebaseAuth.getInstance().signOut();
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                finish();
+            } else {
+                Intent intent = new Intent(this,Register.class);
+                startActivity(intent);
+            }
         }
 
         if (id == R.id.topUp) {
