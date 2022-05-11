@@ -33,7 +33,6 @@ public class TopUpPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_top_up_page);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         userInfo = new UserInfo();
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
@@ -57,15 +56,13 @@ public class TopUpPage extends AppCompatActivity {
     }
     public void topUpOne(View view) {
         DatabaseReference ref =  FirebaseDatabase.getInstance()
-                .getReference(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .getReference("Users/" + FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("userMoney");
         ref.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 int newMoney = userInfo.getUserMoney() + 500;
-                FirebaseDatabase.getInstance().getReference("Users")
-                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .child("userMoney").setValue(newMoney);
+                ref.setValue(newMoney);
                 Toast.makeText(TopUpPage.this, "Thanks for your purchase", Toast.LENGTH_SHORT).show();
                 sendBack(view);
             }
@@ -73,15 +70,13 @@ public class TopUpPage extends AppCompatActivity {
     }
     public void topUpTwo(View view) {
         DatabaseReference ref =  FirebaseDatabase.getInstance()
-                .getReference(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .getReference("Users/" + FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("userMoney");
         ref.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 int newMoney = userInfo.getUserMoney() + 1500;
-                FirebaseDatabase.getInstance().getReference("Users")
-                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .child("userMoney").setValue(newMoney);
+                ref.setValue(newMoney);
                 Toast.makeText(TopUpPage.this, "Thanks for your purchase", Toast.LENGTH_SHORT).show();
                 sendBack(view);
             }
@@ -89,15 +84,13 @@ public class TopUpPage extends AppCompatActivity {
     }
     public void topUpThree(View view) {
         DatabaseReference ref =  FirebaseDatabase.getInstance()
-                .getReference(FirebaseAuth.getInstance().getCurrentUser().getUid())
+                .getReference("Users/" + FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .child("userMoney");
         ref.get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DataSnapshot> task) {
                 int newMoney = userInfo.getUserMoney() + 3000;
-                FirebaseDatabase.getInstance().getReference("Users")
-                        .child(FirebaseAuth.getInstance().getCurrentUser().getUid())
-                        .child("userMoney").setValue(newMoney);
+                ref.setValue(newMoney);
                 Toast.makeText(TopUpPage.this, "Thanks for your purchase", Toast.LENGTH_SHORT).show();
                 sendBack(view);
             }

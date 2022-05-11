@@ -45,7 +45,6 @@ public class UserProfile extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         if (mAuth.getCurrentUser() != null) {
             setContentView(R.layout.activity_user_profile);
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);

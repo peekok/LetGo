@@ -49,7 +49,6 @@ public class DetailActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         imageView = findViewById(R.id.photo);
         author = findViewById(R.id.author);
         toolbar = findViewById(R.id.toolbar);
@@ -89,7 +88,7 @@ public class DetailActivity extends Activity {
 
     public void buy(View view) {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        FirebaseUser user = mAuth.getCurrentUser();
 
         if (user != null) {
             String uid = mAuth.getCurrentUser().getUid().toString();
@@ -101,6 +100,7 @@ public class DetailActivity extends Activity {
                         Log.e("firebase", "Error getting data", task.getException());
                     }
                     else {
+                        System.out.println("I am here");
                         setUserMoney(Integer.parseInt(task.getResult().child("userMoney").getValue().toString()));
                         Log.d("firebase", "Data Imported");
                         System.out.println(getUserMoney());
@@ -122,7 +122,7 @@ public class DetailActivity extends Activity {
                             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, baos);
                             byte[] data = baos.toByteArray();
                             Random random = new Random();
-                            storageRef.child(uid + "/" + random.nextInt(900) + 100).putBytes(data);
+                            storageRef.child(uid + random.nextInt(900) + 100).putBytes(data);
                             Toast.makeText(DetailActivity.this, "This photo is added to your library", Toast.LENGTH_LONG).show();
                             finish();
                         }

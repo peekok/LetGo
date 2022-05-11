@@ -85,5 +85,5 @@ public class ImageAdapter extends BaseAdapter {
                 .centerCrop().into(imageView);
         return imageView;
     }
-    private String[] mThumbIds = new String[100];
+    private String[] mThumbIds = new String[99];
 }

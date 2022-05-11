@@ -60,21 +60,10 @@ public class ForegroundImageView extends ImageView {
         }
     }
 
-    /**
-     * Returns the drawable used as the foreground of this view. The
-     * foreground drawable, if non-null, is always drawn on top of the children.
-     *
-     * @return A Drawable or null if no foreground was set.
-     */
     public Drawable getForeground() {
         return foreground;
     }
 
-    /**
-     * Supply a Drawable that is to be rendered on top of the contents of this ImageView
-     *
-     * @param drawable The Drawable to be drawn on top of the ImageView
-     */
     public void setForeground(Drawable drawable) {
         if (foreground != drawable) {
             if (foreground != null) {

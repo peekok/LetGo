@@ -61,7 +61,7 @@ public class Register extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d(TAG, "createUserWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            userInfo.setUserFirstName(firstNameString + lastNameString);
+                            userInfo.setUserFirstName(firstNameString + " " + lastNameString);
                             System.out.println(userInfo.getUserFirstName());
                             userInfo.setUserEmail(emailString);
                             userInfo.setUserUID(user.getUid().toString());

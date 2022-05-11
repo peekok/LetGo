@@ -13,9 +13,9 @@
             android:icon="@drawable/ic_notifications"
             android:title="Notifications" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/topUp"
             android:icon="@drawable/ic_offers"
-            android:title="My Offers" />
+            android:title="Top up" />
         <item
             android:id="@+id/nav_manage"
             android:icon="@drawable/ic_menu_manage"
