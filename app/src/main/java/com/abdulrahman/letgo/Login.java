@@ -56,4 +56,7 @@ public class Login extends AppCompatActivity {
                             }
                         });
     }
+    public void goToRegister(View view) {
+        startActivity(new Intent(this, Register.class));
+    }
 }

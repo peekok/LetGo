@@ -36,13 +36,13 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/name"
                 android:padding="4dp"
                 android:orientation="horizontal">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="@string/author_name"
+                    android:id="@+id/name"
                     android:textAppearance="@android:style/TextAppearance.Material.Title"
                     android:textSize="25sp"/>
             </LinearLayout>
@@ -50,33 +50,17 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:id="@+id/email"
                 android:layout_marginLeft="10dp"
                 android:orientation="horizontal">
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="13sp"
+                android:id="@+id/email"
                 android:padding="3dp"
                 android:text="@string/author_email"
-
                 />
                 </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/phone"
-                android:layout_marginLeft="10dp"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="13sp"
-                    android:padding="3dp"
-                    android:text="@string/author_phone"
-
-                    />
-            </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,8 +71,8 @@
             <RatingBar
                 android:layout_width="92dp"
                 android:layout_height="20dp"
-                android:numStars="6"
-                android:rating="4.5"
+                android:numStars="5"
+                android:rating="4.7"
                 android:stepSize="0.5"
                 style="@android:style/Widget.Holo.RatingBar.Small" />
                 </LinearLayout>

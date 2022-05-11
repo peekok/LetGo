@@ -3,15 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_detail.xml" value="0.18085106382978725" />
-        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_detail.xml" value="0.33" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_main.xml" value="0.18085106382978725" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_nav.xml" value="0.18085106382978725" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_register.xml" value="0.18085106382978725" />
-        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_user_profile.xml" value="0.18085106382978725" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_top_up_page.xml" value="0.25" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/activity_user_profile.xml" value="0.22" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/app_bar_nav.xml" value="0.358695652173913" />
-        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/content_nav.xml" value="0.12993920972644377" />
-        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/content_user_profile.xml" value="0.18085106382978725" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/content_nav.xml" value="0.14" />
+        <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/layout/content_user_profile.xml" value="0.5" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/menu/activity_nav_drawer.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/menu/menu_user_profile.xml" value="0.23333333333333334" />
         <entry key="..\:/AndroidStudioProjects/LetGo/app/src/main/res/menu/nav.xml" value="0.23333333333333334" />

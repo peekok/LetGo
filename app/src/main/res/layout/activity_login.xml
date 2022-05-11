@@ -52,10 +52,21 @@
 
     <Button
         android:layout_width="200dp"
+        android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:background="#33000000"
         android:textColorHint="@color/white"
         android:hint="@string/login"
         android:onClick="login" />
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="#33000000"
+        android:textColorHint="@color/white"
+        android:hint="@string/register"
+        android:onClick="goToRegister" />
 </LinearLayout>

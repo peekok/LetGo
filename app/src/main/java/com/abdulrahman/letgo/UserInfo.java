@@ -5,7 +5,7 @@ public class UserInfo {
     private String userLastName = "";
     private String userEmail = "";
     private String userUID = "";
-    private String userMoney = "";
+    private int userMoney;
     public UserInfo() {
     }
     public String getUserFirstName() {
@@ -26,10 +26,10 @@ public class UserInfo {
     public void setUserEmail(String userEmail) {
         this.userEmail = userEmail;
     }
-    public String getUserMoney() {
+    public int getUserMoney() {
         return userMoney;
     }
-    public void setUserMoney(String userMoney) {
+    public void setUserMoney(int userMoney) {
         this.userMoney = userMoney;
     }
     public String getUserUID() {
